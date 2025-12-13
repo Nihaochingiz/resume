@@ -19,7 +19,6 @@ body {
     padding: 0 20px;
 }
 
-/* Шапка */
 header {
     background: linear-gradient(135deg, #2c3e50, #4a69bd);
     color: white;
@@ -87,7 +86,76 @@ header h1 {
     text-decoration: underline;
 }
 
+.photo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
 
+.profile-photo {
+    width: 200px; /* Увеличили с 150px до 200px */
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Для больших экранов делаем фото еще больше */
+@media (min-width: 1200px) {
+    .profile-photo {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+    .profile-photo {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .photo-container {
+        order: -1; /* Фото будет сверху на мобильных */
+        margin-bottom: 20px;
+    }
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px; /* Увеличили расстояние между текстом и фото */
+}
+
+.header-text {
+    flex: 1;
+}
+
+.photo-container {
+    flex-shrink: 0;
+}
+
+@media print {
+    .profile-photo {
+        width: 180px !important;
+        height: 180px !important;
+        border: 3px solid #ccc !important;
+    }
+}
 /* Основной контент */
 main {
     padding: 40px 0;
