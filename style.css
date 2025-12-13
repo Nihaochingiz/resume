@@ -1,0 +1,397 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка */
+header {
+    background: linear-gradient(135deg, #2c3e50, #4a69bd);
+    color: white;
+    padding: 40px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.header-text {
+    flex: 1;
+}
+
+.photo-container {
+    margin-left: 40px;
+    flex-shrink: 0;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.low-code-title {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.contacts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+}
+
+.location-citizenship {
+    grid-column: 1 / -1;
+}
+
+.contact-item a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+
+/* Основной контент */
+main {
+    padding: 40px 0;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #4a69bd;
+}
+
+/* Предпочтения */
+.preferences-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+.preference-item {
+    padding: 10px 0;
+}
+
+/* Опыт работы */
+.timeline-item {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.timeline-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.timeline-item h3 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.company {
+    font-weight: bold;
+    color: #4a69bd;
+    margin-bottom: 5px;
+}
+
+.company a {
+    color: #4a69bd;
+    text-decoration: none;
+}
+
+.company a:hover {
+    text-decoration: underline;
+}
+
+.date {
+    color: #777;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.industry {
+    color: #555;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.timeline-item ul {
+    margin-left: 20px;
+}
+
+.timeline-item li {
+    margin-bottom: 8px;
+}
+
+/* Образование и курсы */
+.education-item, .course-item {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.education-item:last-child, .course-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.education-item h3, .course-item h3 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.degree, .institution {
+    color: #4a69bd;
+    margin-bottom: 5px;
+}
+
+/* Проекты */
+.projects-list {
+    display: grid;
+    gap: 20px;
+}
+
+.project-item {
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #4a69bd;
+}
+
+.project-item h3 {
+    margin-bottom: 10px;
+}
+
+.project-item a {
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.project-item a:hover {
+    color: #4a69bd;
+    text-decoration: underline;
+}
+
+/* Навыки */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.skill-category h3 {
+    color: #4a69bd;
+    margin-bottom: 15px;
+}
+
+.skill-category ul {
+    list-style-type: none;
+}
+
+.skill-category li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 20px;
+}
+
+.skill-category li:before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #4a69bd;
+}
+
+/* Подвал */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Анимация для элементов при прокрутке */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .photo-container {
+        margin: 20px 0 0 0;
+        order: -1;
+    }
+    
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .low-code-title {
+        font-size: 1.2rem;
+    }
+    
+    .contacts {
+        grid-template-columns: 1fr;
+    }
+    
+    .location-citizenship {
+        grid-column: auto;
+    }
+    
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .preferences-list {
+        grid-template-columns: 1fr;
+    }
+    
+    section {
+        padding: 20px;
+    }
+}
+
+#achievements {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.achievements-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.achievement-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 6px;
+    border-left: 4px solid #4a69bd;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.achievement-item h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.achievement-item p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.achievement-item a {
+    color: #4a69bd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.achievement-item a:hover {
+    color: #2c3e50;
+    text-decoration: underline;
+}
+
+.community-links {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.community-links li {
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.community-links li:last-child {
+    border-bottom: none;
+}
+
+
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    #achievements {
+        padding: 20px;
+    }
+    
+    .achievement-item {
+        padding: 15px;
+    }
+    
+    .community-links li {
+        padding: 8px 0;
+    }
+}
