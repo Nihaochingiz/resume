@@ -1,5 +1,2 @@
-# Резюме
-
-Вы можете ознакомиться с моим резюме по ссылке:  
-[Resume](https://nihaochingiz.github.io/resume/)
-
+## Резюме
+Ссылка на моё резюме: **[Resume](https://nihaochingiz.github.io/resume/)**
